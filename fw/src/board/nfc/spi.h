@@ -22,8 +22,8 @@
 
 #pragma once
 
-#include <hal/hal-spi.h>
+#include "hal/spi.h"
 
-#define SPI_INST (HAL_SPI_INSTANCE_SPI0)
+#define SPI_INST (SPI_INSTANCE_SPI0)
 
-void board_nfc_spi_init(void);
+void nfc_spi_init(void);

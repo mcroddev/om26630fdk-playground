@@ -22,19 +22,19 @@
 
 #include "spi.h"
 
-void board_nfc_spi_init(void)
+void nfc_spi_init(void)
 {
-	const struct hal_spi_cfg_moto_master cfg = {
+	const struct spi_cfg_moto_master cfg = {
 		// clang-format off
 
-		.clk_speed		= HAL_SYSCTL_PCLKSEL_CCLK_DIV_1,
-		.data_size		= HAL_SPI_DATA_SIZE_8BIT,
-		.cpol			= HAL_SPI_CFG_MOTO_SPI_CPOL_LOW,
-		.cpha			= HAL_SPI_CFG_MOTO_SPI_CPHA_FIRST,
+		.clk_speed		= SYSCTL_PCLKSEL_CCLK_DIV_1,
+		.data_size		= SPI_DATA_SIZE_8BIT,
+		.cpol			= SPI_CFG_MOTO_SPI_CPOL_LOW,
+		.cpha			= SPI_CFG_MOTO_SPI_CPHA_FIRST,
 		.prescaler		= 12,
 		.serial_clk_rate	= 0
 
 		// clang-format on
 	};
-	hal_spi_init_moto_master(SPI_INST, &cfg);
+	spi_init_moto_master(SPI_INST, &cfg);
 }

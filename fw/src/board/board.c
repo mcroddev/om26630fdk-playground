@@ -20,15 +20,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include "hal/hal-gpio.h"
-#include "hal/hal-sysctl.h"
-
 #include "board/nfc/nfc.h"
-#include "board-clk.h"
+
+#include "hal/sysctl.h"
+#include "hal/gpio.h"
+
+#include "clk.h"
 
 void board_init(void)
 {
-	hal_sysctl_peripheral_power_disable(HAL_SYSCTL_PCONP_BIT_ALL_MASK);
+	sysctl_peripheral_power_disable(SYSCTL_PCONP_BIT_ALL_MASK);
 
 	// ************************* ERRATA WARNING ****************************
 	//
@@ -54,10 +55,10 @@ void board_init(void)
 	//
 	// This means we have to configure all the peripherals first, and then
 	// activate PLL0.
-	hal_gpio_init();
-	board_nfc_init();
+	gpio_init();
+	nfc_init();
 
-	board_clk_cfg();
+	clk_init();
 
 #ifndef NDEBUG
 	const u8 ver = board_nfc_get_device_version();

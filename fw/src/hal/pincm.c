@@ -20,36 +20,17 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include "board-clk.h"
-#include "hal/hal-sysctl.h"
+#include "pincm.h"
+#include "util.h"
 
-enum {
-	PLL0_CCLK_MUL = 12,
-	PLL0_CCLK_DIV = 1,
-	PLL0_CCLK_CCLKDIV = 3,
-};
-
-void board_clk_cfg(void)
+void pincm_set_func(const enum pinsel_reg reg, const u32 pinsel_mask,
+		    const enum pinsel_func func)
 {
-	// Enable the main oscillator.
-	//
-	// On the OM26630FDK, there is a 12MHz crystal connected to the XTAL1
-	// and XTAL2 pins.
-	hal_sysctl_main_osc_enable(HAL_SYSCTL_MAIN_OSC_RANGE_1_TO_20_MHZ);
+	mmio_rmw_mask32(reg, pinsel_mask, func);
+}
 
-	// Configure CCLK to run at ~48MHz.
-	const struct hal_sysctl_pll_cfg pll_cfg = {
-		// clang-format off
-
-		.pll_mul	= PLL0_CCLK_MUL,
-		.pll_div	= PLL0_CCLK_DIV,
-		.cclkcfg_div	= PLL0_CCLK_CCLKDIV,
-		.osc_src	= HAL_SYSCTL_OSC_MAIN
-
-		// clang-format on
-	};
-	hal_sysctl_cclk_cfg(&pll_cfg);
-
-	// We're now running at 48MHz; adjust the flash access time.
-	hal_sysctl_flash_access_time_set(HAL_SYSCTL_FLASH_ACCESS_TIME_CLK_4);
+void pincm_set_resistor(const enum pinmode_reg reg, const u32 pinmode_mask,
+			const enum pinmode_resistor resistor)
+{
+	mmio_rmw_mask32(reg, pinmode_mask, resistor);
 }

@@ -22,9 +22,9 @@
 
 #include <stdbool.h>
 
-#include "hal-nvic.h"
-#include "hal-spi.h"
-#include "hal-sysctl.h"
+#include "nvic.h"
+#include "spi.h"
+#include "sysctl.h"
 
 enum ssp_base_addr {
 	SSP0_BASE_ADDR = 0x40088000,
@@ -83,56 +83,56 @@ enum {
 
 static struct {
 	const enum ssp_base_addr base_addr;
-	const enum hal_sysctl_pconp_bit pconp_bit;
-	const enum hal_sysctl_reg pclksel_reg;
-	const enum hal_sysctl_pclksel_mask pclksel_mask;
-	const enum hal_nvic_irq irq;
+	const enum sysctl_pconp_bit pconp_bit;
+	const enum sysctl_reg pclksel_reg;
+	const enum sysctl_pclksel_mask pclksel_mask;
+	const enum nvic_irq irq;
 } spi_inst[] = {
 	// clang-format off
 
-	[HAL_SPI_INSTANCE_SPI0]	= {
+	[SPI_INSTANCE_SPI0]	= {
 		.base_addr	= SSP0_BASE_ADDR,
-		.pconp_bit	= HAL_SYSCTL_PCONP_BIT_PCSSP0,
-		.pclksel_reg	= HAL_SYSCTL_REG_PCLKSEL1,
-		.pclksel_mask	= HAL_SYSCTL_PCLKSEL1_MASK_PCLK_SSP0,
-		.irq		= HAL_NVIC_IRQ_SSP0
+		.pconp_bit	= SYSCTL_PCONP_BIT_PCSSP0,
+		.pclksel_reg	= SYSCTL_REG_PCLKSEL1,
+		.pclksel_mask	= SYSCTL_PCLKSEL1_MASK_PCLK_SSP0,
+		.irq		= NVIC_IRQ_SSP0
 	},
 
-	[HAL_SPI_INSTANCE_SPI1] = {
+	[SPI_INSTANCE_SPI1] = {
 		.base_addr	= SSP1_BASE_ADDR,
-		.pconp_bit	= HAL_SYSCTL_PCONP_BIT_PCSSP1,
-		.pclksel_reg	= HAL_SYSCTL_REG_PCLKSEL0,
-		.pclksel_mask	= HAL_SYSCTL_PCLKSEL0_MASK_PCLK_SSP1,
-		.irq		= HAL_NVIC_IRQ_SSP1
+		.pconp_bit	= SYSCTL_PCONP_BIT_PCSSP1,
+		.pclksel_reg	= SYSCTL_REG_PCLKSEL0,
+		.pclksel_mask	= SYSCTL_PCLKSEL0_MASK_PCLK_SSP1,
+		.irq		= NVIC_IRQ_SSP1
 	}
 
 	// clang-format on
 };
 
-ALWAYS_INLINE u32 ssp_reg_read(const enum hal_spi_instance inst,
+ALWAYS_INLINE u32 ssp_reg_read(const enum spi_instance inst,
 			       const enum ssp_reg reg)
 {
 	return mmio_read32(spi_inst[inst].base_addr + reg);
 }
 
-ALWAYS_INLINE void ssp_reg_write(const enum hal_spi_instance inst,
+ALWAYS_INLINE void ssp_reg_write(const enum spi_instance inst,
 				 const enum ssp_reg reg, const u32 val)
 {
 	mmio_write32(spi_inst[inst].base_addr + reg, val);
 }
 
-ALWAYS_INLINE bool tx_fifo_not_full(const enum hal_spi_instance inst)
+ALWAYS_INLINE bool tx_fifo_not_full(const enum spi_instance inst)
 {
 	return ssp_reg_read(inst, SSP_REG_SR) & SR_TNF;
 }
 
-ALWAYS_INLINE bool rx_fifo_not_empty(const enum hal_spi_instance inst)
+ALWAYS_INLINE bool rx_fifo_not_empty(const enum spi_instance inst)
 {
 	return ssp_reg_read(inst, SSP_REG_SR) & SR_RNE;
 }
 
 #ifndef NDEBUG
-static void handle_isr(const enum hal_spi_instance inst)
+static void handle_isr(const enum spi_instance inst)
 {
 	const u32 MIS = ssp_reg_read(inst, SSP_REG_MIS);
 
@@ -149,25 +149,25 @@ static void handle_isr(const enum hal_spi_instance inst)
 	}
 }
 
-void hal_isr_SSP0(void)
+void isr_SSP0(void)
 {
-	handle_isr(HAL_SPI_INSTANCE_SPI0);
+	handle_isr(SPI_INSTANCE_SPI0);
 }
 
-void hal_isr_SSP1(void)
+void isr_SSP1(void)
 {
-	handle_isr(HAL_SPI_INSTANCE_SPI1);
+	handle_isr(SPI_INSTANCE_SPI1);
 }
 #endif // NDEBUG
 
-static void moto_spi_cpol_mode_set(const enum hal_spi_instance inst,
-				   const enum hal_spi_cfg_moto_spi_cpol cpol)
+static void moto_spi_cpol_mode_set(const enum spi_instance inst,
+				   const enum spi_cfg_moto_spi_cpol cpol)
 {
 	u32 CR0 = ssp_reg_read(inst, SSP_REG_CR0);
 
-	if (cpol == HAL_SPI_CFG_MOTO_SPI_CPOL_LOW)
+	if (cpol == SPI_CFG_MOTO_SPI_CPOL_LOW)
 		CR0 &= ~CR0_CPOL;
-	else if (cpol == HAL_SPI_CFG_MOTO_SPI_CPOL_HIGH)
+	else if (cpol == SPI_CFG_MOTO_SPI_CPOL_HIGH)
 		CR0 |= CR0_CPOL;
 	else
 		UNREACHABLE;
@@ -175,14 +175,14 @@ static void moto_spi_cpol_mode_set(const enum hal_spi_instance inst,
 	ssp_reg_write(inst, SSP_REG_CR0, CR0);
 }
 
-static void moto_spi_cpha_mode_set(const enum hal_spi_instance inst,
-				   const enum hal_spi_cfg_moto_spi_cpha cpha)
+static void moto_spi_cpha_mode_set(const enum spi_instance inst,
+				   const enum spi_cfg_moto_spi_cpha cpha)
 {
 	u32 CR0 = ssp_reg_read(inst, SSP_REG_CR0);
 
-	if (cpha == HAL_SPI_CFG_MOTO_SPI_CPHA_FIRST)
+	if (cpha == SPI_CFG_MOTO_SPI_CPHA_FIRST)
 		CR0 &= ~CR0_CPHA;
-	else if (cpha == HAL_SPI_CFG_MOTO_SPI_CPHA_SECOND)
+	else if (cpha == SPI_CFG_MOTO_SPI_CPHA_SECOND)
 		CR0 |= CR0_CPHA;
 	else
 		UNREACHABLE;
@@ -190,15 +190,15 @@ static void moto_spi_cpha_mode_set(const enum hal_spi_instance inst,
 	ssp_reg_write(inst, SSP_REG_CR0, CR0);
 }
 
-void hal_spi_init_moto_master(const enum hal_spi_instance inst,
-			      const struct hal_spi_cfg_moto_master *const cfg)
+void spi_init_moto_master(const enum spi_instance inst,
+			  const struct spi_cfg_moto_master *const cfg)
 {
 	// The two SSP interfaces, SSP0 and SSP1 are configured using the
 	// following registers:
 
 	// 1. Power: In the PCONP register, set bit PCSSP0 to enable SSP0 and
 	//    bit PCSSP1 to enable SSP1.
-	hal_sysctl_peripheral_power_enable(spi_inst[inst].pconp_bit);
+	sysctl_peripheral_power_enable(spi_inst[inst].pconp_bit);
 
 	// 2. Clock: In PCLKSEL0 select PCLK_SSP1; in PCLKSEL1 select PCLK_SSP0.
 	//    In master mode, the clock must be scaled down.
@@ -217,7 +217,7 @@ void hal_spi_init_moto_master(const enum hal_spi_instance inst,
 	u32 IMSC = ssp_reg_read(inst, SSP_REG_IMSC);
 	IMSC |= IMSC_BIT_RORIM;
 	ssp_reg_write(inst, SSP_REG_IMSC, IMSC);
-	hal_nvic_irq_enable(spi_inst[inst].irq);
+	nvic_irq_enable(spi_inst[inst].irq);
 #endif // NDEBUG
 
 	// 5. Initialization: There are two control registers for each of the
@@ -242,44 +242,43 @@ void hal_spi_init_moto_master(const enum hal_spi_instance inst,
 	ssp_reg_write(inst, SSP_REG_CR1, CR1);
 }
 
-void hal_spi_tx_blocking_u8(const enum hal_spi_instance inst,
-			    const u8 *const src, const u32 src_size)
+void spi_tx_blocking_u8(const enum spi_instance inst, const u8 *const src,
+			const u32 src_size)
 {
 	for (u32 i = 0; i < src_size;) {
 		while (!tx_fifo_not_full(inst))
-			hal_no_op();
+			nop();
 
 		ssp_reg_write(inst, SSP_REG_DR, src[i++]);
 
 		while (!rx_fifo_not_empty(inst))
-			hal_no_op();
+			nop();
 
 		ssp_reg_read(inst, SSP_REG_DR);
 	}
 
 	while (ssp_reg_read(inst, SSP_REG_SR) & SR_BSY)
-		hal_no_op();
+		nop();
 }
 
-void hal_spi_tx_rx_blocking_u8(const enum hal_spi_instance inst,
-			       const u8 *const src, u8 *const dst,
-			       const u32 size)
+void spi_tx_rx_blocking_u8(const enum spi_instance inst, const u8 *const src,
+			   u8 *const dst, const u32 size)
 {
 	u32 src_idx = 0;
 	u32 rx_idx = 0;
 
 	while ((src_idx < size) && (rx_idx < size)) {
 		while (!tx_fifo_not_full(inst))
-			hal_no_op();
+			nop();
 
 		ssp_reg_write(inst, SSP_REG_DR, src[src_idx++]);
 
 		while (!rx_fifo_not_empty(inst))
-			hal_no_op();
+			nop();
 
 		dst[rx_idx++] = ssp_reg_read(inst, SSP_REG_DR);
 	}
 
 	while (ssp_reg_read(inst, SSP_REG_SR) & SR_BSY)
-		hal_no_op();
+		nop();
 }

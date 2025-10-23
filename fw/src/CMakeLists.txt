@@ -23,7 +23,7 @@
 set(SRCS
 	main.c
 	board/board.c
-	board/board-clk.c
+	board/clk.c
 	board/nfc/clrc663-spi-impl.c
 	board/nfc/gpio.c
 	board/nfc/nfc.c
@@ -31,30 +31,30 @@ set(SRCS
 	drivers/clrc663/clrc663.c
 	drivers/clrc663/clrc663-cmd.c
 	drivers/clrc663/clrc663-spi.c
-	hal/hal-gpio.c
-	hal/hal-pincm.c
-	hal/hal-spi.c
-	hal/hal-startup.c
-	hal/hal-sysctl.c
+	hal/gpio.c
+	hal/pincm.c
+	hal/spi.c
+	hal/startup.c
+	hal/sysctl.c
 )
 
 set(HDRS
-	compiler.h
-	types.h
-	util.h
+	common/compiler.h
+	common/types.h
+	common/util.h
 	board/board.h
-	board/board-clk.h
+	board/clk.h
 	board/nfc/gpio.h
 	board/nfc/nfc.h
 	board/nfc/spi.h
 	drivers/clrc663/clrc663.h
 	drivers/clrc663/clrc663-cmd.h
-	hal/hal-gpio.h
-	hal/hal-nvic.h
-	hal/hal-pincm.h
-	hal/hal-spi.h
-	hal/hal-sysctl.h
-	hal/hal-util.h
+	hal/gpio.h
+	hal/nvic.h
+	hal/pincm.h
+	hal/spi.h
+	hal/sysctl.h
+	hal/util.h
 )
 add_executable(om26630fdk-playground-fw ${SRCS} ${HDRS})
 

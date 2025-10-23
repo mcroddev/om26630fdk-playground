@@ -24,74 +24,74 @@
 
 static void pin_init_lpc_sck(void)
 {
-	const struct hal_gpio_pin_cfg cfg = {
+	const struct gpio_pin_cfg cfg = {
 		// clang-format off
 
-		.resistor	= HAL_PINMODE_RESISTOR_NONE,
-		.pin_func	= HAL_PINSEL_FUNC_P_0_15_SCK0
+		.resistor	= PINMODE_RESISTOR_NONE,
+		.pin_func	= PINSEL_FUNC_P_0_15_SCK0
 
 		// clang-format on
 	};
-	hal_gpio_pin_init(GPIO_PIN_LPC_SCK, &cfg);
+	gpio_pin_init(GPIO_PIN_LPC_SCK, &cfg);
 }
 
 static void pin_init_lpc_ssel(void)
 {
-	const struct hal_gpio_pin_cfg cfg = {
+	const struct gpio_pin_cfg cfg = {
 		// clang-format off
 
-		.resistor	= HAL_PINMODE_RESISTOR_NONE,
-		.pin_func	= HAL_PINSEL_FUNC_GPIO,
-		.dir		= HAL_GPIO_PIN_DIR_OUTPUT,
-		.initial_state	= HAL_GPIO_PIN_INITIAL_STATE_HIGH
+		.resistor	= PINMODE_RESISTOR_NONE,
+		.pin_func	= PINSEL_FUNC_GPIO,
+		.dir		= GPIO_PIN_DIR_OUTPUT,
+		.initial_state	= GPIO_PIN_INITIAL_STATE_HIGH
 
 		// clang-format on
 	};
-	hal_gpio_pin_init(GPIO_PIN_LPC_SSEL, &cfg);
+	gpio_pin_init(GPIO_PIN_LPC_SSEL, &cfg);
 }
 
 static void pin_init_lpc_miso(void)
 {
-	const struct hal_gpio_pin_cfg cfg = {
+	const struct gpio_pin_cfg cfg = {
 		// clang-format off
 
-		.resistor	= HAL_PINMODE_RESISTOR_NONE,
-		.pin_func	= HAL_PINSEL_FUNC_P_0_17_MISO0
+		.resistor	= PINMODE_RESISTOR_NONE,
+		.pin_func	= PINSEL_FUNC_P_0_17_MISO0
 
 		// clang-format on
 	};
-	hal_gpio_pin_init(GPIO_PIN_LPC_MISO, &cfg);
+	gpio_pin_init(GPIO_PIN_LPC_MISO, &cfg);
 }
 
 static void pin_init_lpc_mosi(void)
 {
-	const struct hal_gpio_pin_cfg cfg = {
+	const struct gpio_pin_cfg cfg = {
 		// clang-format off
 
-		.resistor	= HAL_PINMODE_RESISTOR_NONE,
-		.pin_func	= HAL_PINSEL_FUNC_P_0_18_MOSI0
+		.resistor	= PINMODE_RESISTOR_NONE,
+		.pin_func	= PINSEL_FUNC_P_0_18_MOSI0
 
 		// clang-format on
 	};
-	hal_gpio_pin_init(GPIO_PIN_LPC_MOSI, &cfg);
+	gpio_pin_init(GPIO_PIN_LPC_MOSI, &cfg);
 }
 
 static void pin_init_clrc_rst(void)
 {
-	const struct hal_gpio_pin_cfg cfg = {
+	const struct gpio_pin_cfg cfg = {
 		// clang-format off
 
-		.resistor	= HAL_PINMODE_RESISTOR_NONE,
-		.pin_func	= HAL_PINSEL_FUNC_GPIO,
-		.dir		= HAL_GPIO_PIN_DIR_OUTPUT,
-		.initial_state	= HAL_GPIO_PIN_INITIAL_STATE_HIGH
+		.resistor	= PINMODE_RESISTOR_NONE,
+		.pin_func	= PINSEL_FUNC_GPIO,
+		.dir		= GPIO_PIN_DIR_OUTPUT,
+		.initial_state	= GPIO_PIN_INITIAL_STATE_HIGH
 
 		// clang-format on
 	};
-	hal_gpio_pin_init(GPIO_PIN_CLRC_RST, &cfg);
+	gpio_pin_init(GPIO_PIN_CLRC_RST, &cfg);
 }
 
-void board_nfc_gpio_init(void)
+void nfc_gpio_init(void)
 {
 	pin_init_lpc_sck();
 	pin_init_lpc_ssel();

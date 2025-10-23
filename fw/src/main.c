@@ -22,14 +22,13 @@
 
 #include <stdlib.h>
 #include "board/board.h"
-#include "hal/hal-util.h"
 
 int main(void)
 {
 	board_init();
 
 	for (;;)
-		hal_no_op();
+		;
 
 	return EXIT_FAILURE;
 }

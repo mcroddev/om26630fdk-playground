@@ -83,7 +83,7 @@ enum {
 #define app_assert(expr)             \
 	({                           \
 		if (!(expr)) {       \
-			hal_halt();  \
+			bkpt();      \
 			UNREACHABLE; \
 		}                    \
 	})

@@ -26,22 +26,22 @@
 #include "nfc.h"
 #include "spi.h"
 
-void board_nfc_init(void)
+void nfc_init(void)
 {
-	board_nfc_gpio_init();
-	board_nfc_spi_init();
+	nfc_gpio_init();
+	nfc_spi_init();
 
 	board_nfc_enable();
 }
 
 void board_nfc_enable(void)
 {
-	hal_gpio_pin_set_low(GPIO_PIN_CLRC_RST);
+	gpio_pin_set_low(GPIO_PIN_CLRC_RST);
 }
 
 void board_nfc_disable(void)
 {
-	hal_gpio_pin_set_high(GPIO_PIN_CLRC_RST);
+	gpio_pin_set_high(GPIO_PIN_CLRC_RST);
 }
 
 u8 board_nfc_get_device_version(void)

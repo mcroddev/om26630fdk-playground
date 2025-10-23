@@ -27,21 +27,21 @@
 
 void drv_clrc663_nss_pin_set_low(void)
 {
-	hal_gpio_pin_set_low(GPIO_PIN_LPC_SSEL);
+	gpio_pin_set_low(GPIO_PIN_LPC_SSEL);
 }
 
 void drv_clrc663_nss_pin_set_high(void)
 {
-	hal_gpio_pin_set_high(GPIO_PIN_LPC_SSEL);
+	gpio_pin_set_high(GPIO_PIN_LPC_SSEL);
 }
 
 void drv_clrc663_spi_tx_blocking(const u8 *const src, const size_t src_size)
 {
-	hal_spi_tx_blocking_u8(SPI_INST, src, src_size);
+	spi_tx_blocking_u8(SPI_INST, src, src_size);
 }
 
 void drv_clrc663_spi_tx_rx_blocking(const u8 *const src, u8 *const dst,
 				    const size_t size)
 {
-	hal_spi_tx_rx_blocking_u8(SPI_INST, src, dst, size);
+	spi_tx_rx_blocking_u8(SPI_INST, src, dst, size);
 }

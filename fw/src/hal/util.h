@@ -22,8 +22,8 @@
 
 #pragma once
 
-#include "compiler.h"
-#include "util.h"
+#include "common/compiler.h"
+#include "common/util.h"
 
 #define DEFINE_MMIO_HELPERS(bitwidth)                                         \
 	ALWAYS_INLINE uint##bitwidth##_t mmio_read##bitwidth(                 \
@@ -63,12 +63,12 @@
 
 DEFINE_MMIO_HELPERS(32);
 
-ALWAYS_INLINE void hal_no_op(void)
+ALWAYS_INLINE void nop(void)
 {
 	asm("nop");
 }
 
-ALWAYS_INLINE void hal_halt(void)
+ALWAYS_INLINE void bkpt(void)
 {
 	asm("bkpt");
 }

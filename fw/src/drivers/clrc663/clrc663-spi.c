@@ -20,8 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <string.h>
-
 #include "clrc663.h"
 
 extern void drv_clrc663_nss_pin_set_low(void);
@@ -39,12 +37,8 @@ enum {
 uint8_t drv_clrc663_reg_read(const enum drv_clrc663_reg reg)
 {
 	const uint8_t tx[] = {
-		// clang-format off
-
-		[0]	= (reg << 1) | REG_READ,
-		[1]	= DUMMY_BYTE
-
-		// clang-format on
+		[0] = (reg << 1) | REG_READ,
+		[1] = DUMMY_BYTE,
 	};
 
 	uint8_t rx[2];
@@ -59,12 +53,8 @@ uint8_t drv_clrc663_reg_read(const enum drv_clrc663_reg reg)
 void drv_clrc663_reg_write(const enum drv_clrc663_reg reg, const uint8_t val)
 {
 	const uint8_t tx[] = {
-		// clang-format off
-
-		[0]	= (reg << 1) | REG_WRITE,
-		[1]	= val
-
-		// clang-format on
+		[0] = (reg << 1) | REG_WRITE,
+		[1] = val,
 	};
 
 	drv_clrc663_nss_pin_set_low();

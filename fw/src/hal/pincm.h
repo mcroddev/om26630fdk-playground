@@ -24,9 +24,51 @@
 
 #include "common/types.h"
 
-void nfc_init(void);
+enum pinsel_reg {
+	PINSEL_REG_PINSEL0 = 0x4002C000,
+	PINSEL_REG_PINSEL1 = 0x4002C004,
+	PINSEL_REG_PINSEL2 = 0x4002C008,
+	PINSEL_REG_PINSEL3 = 0x4002C00C,
+	PINSEL_REG_PINSEL4 = 0x4002C010,
+	PINSEL_REG_PINSEL7 = 0x4002C01C,
+	PINSEL_REG_PINSEL8 = 0x4002C020,
+	PINSEL_REG_PINSEL9 = 0x4002C024,
+	PINSEL_REG_PINSEL10 = 0x4002C028
+};
 
-void board_nfc_enable(void);
-void board_nfc_disable(void);
+enum pinmode_reg {
+	PINMODE_REG_PINMODE0 = 0x4002C040,
+	PINMODE_REG_PINMODE1 = 0x4002C044,
+	PINMODE_REG_PINMODE2 = 0x4002C048,
+	PINMODE_REG_PINMODE3 = 0x4002C04C,
+	PINMODE_REG_PINMODE4 = 0x4002C050
+};
 
-u8 board_nfc_get_device_version(void);
+enum pinmode_resistor {
+	PINMODE_RESISTOR_PULL_UP,
+	PINMODE_RESISTOR_REPEATER,
+	PINMODE_RESISTOR_NONE,
+	PINMODE_RESISTOR_PULL_DOWN
+};
+
+enum pinsel_func {
+	PINSEL_FUNC_GPIO = 0,
+
+	PINSEL_FUNC_P_0_15_SCK0 = 2,
+	PINSEL_FUNC_P_0_16_SSEL0 = 2,
+	PINSEL_FUNC_P_0_17_MISO0 = 2,
+	PINSEL_FUNC_P_0_18_MOSI0 = 2,
+
+	PINSEL_FUNC_P_0_29_USB_D_POS = 1,
+	PINSEL_FUNC_P_0_30_USB_D_NEG = 1,
+
+	PINSEL_FUNC_P_1_27_CLKOUT = 1,
+
+	PINSEL_FUNC_P_2_9_USB_CON = 1
+};
+
+void pincm_set_func(enum pinsel_reg reg, u32 pinsel_mask,
+		    enum pinsel_func func);
+
+void pincm_set_resistor(enum pinmode_reg reg, u32 pinmode_mask,
+			enum pinmode_resistor resistor);

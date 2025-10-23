@@ -20,18 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include "hal-pincm.h"
-#include "hal-util.h"
+#pragma once
 
-void hal_pincm_set_func(const enum hal_pinsel_reg reg, const u32 pinsel_mask,
-			const enum hal_pinsel_func func)
-{
-	mmio_rmw_mask32(reg, pinsel_mask, func);
-}
-
-void hal_pincm_set_resistor(const enum hal_pinmode_reg reg,
-			    const u32 pinmode_mask,
-			    const enum hal_pinmode_resistor resistor)
-{
-	mmio_rmw_mask32(reg, pinmode_mask, resistor);
-}
+void clk_init(void);
