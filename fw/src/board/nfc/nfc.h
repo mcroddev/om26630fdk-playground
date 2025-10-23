@@ -20,16 +20,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <stdlib.h>
-#include "board/board.h"
-#include "hal/hal-util.h"
+#pragma once
 
-int main(void)
-{
-	board_init();
+#include <stdbool.h>
 
-	for (;;)
-		hal_no_op();
+void board_nfc_init(void);
 
-	return EXIT_FAILURE;
-}
+void board_nfc_enable(void);
+void board_nfc_disable(void);

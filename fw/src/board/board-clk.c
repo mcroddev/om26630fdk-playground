@@ -20,16 +20,36 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <stdlib.h>
-#include "board/board.h"
-#include "hal/hal-util.h"
+#include "board-clk.h"
+#include "hal/hal-sysctl.h"
 
-int main(void)
+enum {
+	PLL0_CCLK_MUL = 12,
+	PLL0_CCLK_DIV = 1,
+	PLL0_CCLK_CCLKDIV = 3,
+};
+
+void board_clk_cfg(void)
 {
-	board_init();
+	// Enable the main oscillator.
+	//
+	// On the OM26630FDK, there is a 12MHz crystal connected to the XTAL1
+	// and XTAL2 pins.
+	hal_sysctl_main_osc_enable(HAL_SYSCTL_MAIN_OSC_RANGE_1_TO_20_MHZ);
 
-	for (;;)
-		hal_no_op();
+	// Configure CCLK to run at ~48MHz.
+	const struct hal_sysctl_pll_cfg pll_cfg = {
+		// clang-format off
 
-	return EXIT_FAILURE;
+		.pll_mul	= PLL0_CCLK_MUL,
+		.pll_div	= PLL0_CCLK_DIV,
+		.cclkcfg_div	= PLL0_CCLK_CCLKDIV,
+		.osc_src	= HAL_SYSCTL_OSC_MAIN
+
+		// clang-format on
+	};
+	hal_sysctl_cclk_cfg(&pll_cfg);
+
+	// We're now running at 48MHz; adjust the flash access time.
+	hal_sysctl_flash_access_time_set(HAL_SYSCTL_FLASH_ACCESS_TIME_CLK_4);
 }

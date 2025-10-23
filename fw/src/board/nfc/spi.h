@@ -20,16 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <stdlib.h>
-#include "board/board.h"
-#include "hal/hal-util.h"
+#pragma once
 
-int main(void)
-{
-	board_init();
+#include <hal/hal-spi.h>
 
-	for (;;)
-		hal_no_op();
+#define SPI_INST (HAL_SPI_INSTANCE_SPI0)
 
-	return EXIT_FAILURE;
-}
+void board_nfc_spi_init(void);

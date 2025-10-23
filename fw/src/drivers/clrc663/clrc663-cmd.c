@@ -20,16 +20,45 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <stdlib.h>
-#include "board/board.h"
-#include "hal/hal-util.h"
+#include "clrc663.h"
+#include "clrc663-cmd.h"
 
-int main(void)
+void drv_clrc663_cmd_Idle(void)
 {
-	board_init();
+	drv_clrc663_reg_write(DRV_CLRC663_REG_Command, DRV_CLRC663_CMD_Idle);
+}
 
-	for (;;)
-		hal_no_op();
+void drv_clrc663_cmd_LPCD(void)
+{
+	drv_clrc663_cmd_Idle();
+	drv_clrc663_reg_write(DRV_CLRC663_REG_Command, DRV_CLRC663_CMD_LPCD);
+}
 
-	return EXIT_FAILURE;
+void drv_clrc663_cmd_LoadKey(const uint8_t *const key)
+{
+	drv_clrc663_cmd_Idle();
+	drv_clrc663_fifo_flush();
+	drv_clrc663_fifo_write(key, DRV_CLRC663_MIFARE_CLASSIC_KEY_NUM_BYTES);
+	drv_clrc663_reg_write(DRV_CLRC663_REG_Command, DRV_CLRC663_CMD_LoadKey);
+}
+
+void drv_clrc663_cmd_LoadProtocol(const enum drv_clrc663_protocol_rx rx,
+				  const enum drv_clrc663_protocol_tx tx)
+{
+	drv_clrc663_cmd_Idle();
+	drv_clrc663_fifo_flush();
+
+	const uint8_t tx_buf[] = {
+		// clang-format off
+
+		[0]	= rx,
+		[1]	= tx
+
+		// clang-format on
+	};
+
+	drv_clrc663_fifo_write(tx_buf, sizeof(tx_buf));
+
+	drv_clrc663_reg_write(DRV_CLRC663_REG_Command,
+			      DRV_CLRC663_CMD_LoadProtocol);
 }

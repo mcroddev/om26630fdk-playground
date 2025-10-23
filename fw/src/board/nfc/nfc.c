@@ -20,16 +20,31 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <stdlib.h>
-#include "board/board.h"
-#include "hal/hal-util.h"
+#include "drivers/clrc663/clrc663.h"
 
-int main(void)
+#include "gpio.h"
+#include "nfc.h"
+#include "spi.h"
+
+void board_nfc_init(void)
 {
-	board_init();
+	board_nfc_gpio_init();
+	board_nfc_spi_init();
 
-	for (;;)
-		hal_no_op();
+	board_nfc_enable();
 
-	return EXIT_FAILURE;
+#ifndef NDEBUG
+	const u8 ver = drv_clrc663_reg_read(DRV_CLRC663_REG_Version);
+	app_assert(ver == 0x1A);
+#endif // NDEBUG
+}
+
+void board_nfc_enable(void)
+{
+	hal_gpio_pin_set_low(GPIO_PIN_CLRC_RST);
+}
+
+void board_nfc_disable(void)
+{
+	hal_gpio_pin_set_high(GPIO_PIN_CLRC_RST);
 }

@@ -20,16 +20,54 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <stdlib.h>
-#include "board/board.h"
-#include "hal/hal-util.h"
+#include <string.h>
 
-int main(void)
+#include "clrc663.h"
+
+extern void drv_clrc663_nss_pin_set_low(void);
+extern void drv_clrc663_nss_pin_set_high(void);
+extern void drv_clrc663_spi_tx_blocking(const uint8_t *src, size_t src_size);
+extern void drv_clrc663_spi_tx_rx_blocking(const uint8_t *src, uint8_t *dst,
+					   size_t size);
+
+enum {
+	REG_WRITE,
+	REG_READ,
+	DUMMY_BYTE = UINT8_C(0xDB),
+};
+
+uint8_t drv_clrc663_reg_read(const enum drv_clrc663_reg reg)
 {
-	board_init();
+	const uint8_t tx[] = {
+		// clang-format off
 
-	for (;;)
-		hal_no_op();
+		[0]	= (reg << 1) | REG_READ,
+		[1]	= DUMMY_BYTE
 
-	return EXIT_FAILURE;
+		// clang-format on
+	};
+
+	uint8_t rx[2];
+
+	drv_clrc663_nss_pin_set_low();
+	drv_clrc663_spi_tx_rx_blocking(tx, rx, 2);
+	drv_clrc663_nss_pin_set_high();
+
+	return rx[1];
+}
+
+void drv_clrc663_reg_write(const enum drv_clrc663_reg reg, const uint8_t val)
+{
+	const uint8_t tx[] = {
+		// clang-format off
+
+		[0]	= (reg << 1) | REG_WRITE,
+		[1]	= val
+
+		// clang-format on
+	};
+
+	drv_clrc663_nss_pin_set_low();
+	drv_clrc663_spi_tx_blocking(tx, 2);
+	drv_clrc663_nss_pin_set_high();
 }

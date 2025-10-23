@@ -20,16 +20,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include <stdlib.h>
-#include "board/board.h"
-#include "hal/hal-util.h"
+#pragma once
 
-int main(void)
-{
-	board_init();
-
-	for (;;)
-		hal_no_op();
-
-	return EXIT_FAILURE;
-}
+void board_clk_cfg(void);
