@@ -24,12 +24,12 @@
 
 #include "common/types.h"
 
-enum board_nfc_protocol {
-	BOARD_NFC_PROTOCOL_MIFARE_106,
-	BOARD_NFC_PROTOCOL_MIFARE_212,
-	BOARD_NFC_PROTOCOL_MIFARE_424,
-	BOARD_NFC_PROTOCOL_MIFARE_848,
-	BOARD_NFC_PROTOCOL_NUM
+enum nfc_protocol {
+	NFC_PROTOCOL_MIFARE_106,
+	NFC_PROTOCOL_MIFARE_212,
+	NFC_PROTOCOL_MIFARE_424,
+	NFC_PROTOCOL_MIFARE_848,
+	NFC_PROTOCOL_NUM
 };
 
 void nfc_init(void);
@@ -37,7 +37,7 @@ void nfc_init(void);
 void nfc_enable(void);
 void nfc_disable(void);
 
-void nfc_protocol_set(enum board_nfc_protocol protocol);
+void nfc_protocol_set(enum nfc_protocol protocol);
 
 void nfc_rf_field_enable(void);
 void nfc_rf_field_disable(void);

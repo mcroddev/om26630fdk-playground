@@ -29,10 +29,10 @@
 static struct protocol_pair {
 	const enum drv_clrc663_protocol_tx tx;
 	const enum drv_clrc663_protocol_rx rx;
-} const protocol_tbl[BOARD_NFC_PROTOCOL_NUM] = {
+} const protocol_tbl[NFC_PROTOCOL_NUM] = {
 	// clang-format off
 
-	[BOARD_NFC_PROTOCOL_MIFARE_106] = {
+	[NFC_PROTOCOL_MIFARE_106] = {
 		.tx	= DRV_CLRC663_PROTOCOL_TX_ISO_IEC_14443A_106_MILLER,
 		.rx	= DRV_CLRC663_PROTOCOL_RX_ISO_IEC_14443A_106_MANCHESTER_SUBC
 	}
@@ -58,7 +58,7 @@ void nfc_disable(void)
 	gpio_pin_set_high(GPIO_PIN_CLRC_RST);
 }
 
-void nfc_protocol_set(const enum board_nfc_protocol protocol)
+void nfc_protocol_set(const enum nfc_protocol protocol)
 {
 	const struct protocol_pair *const proto = &protocol_tbl[protocol];
 	drv_clrc663_cmd_LoadProtocol(proto->rx, proto->tx);

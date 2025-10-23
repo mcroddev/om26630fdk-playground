@@ -28,7 +28,7 @@ int main(void)
 {
 	board_init();
 
-	nfc_protocol_set(BOARD_NFC_PROTOCOL_MIFARE_106);
+	nfc_protocol_set(NFC_PROTOCOL_MIFARE_106);
 	nfc_rf_field_enable();
 
 	for (;;)
