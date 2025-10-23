@@ -49,12 +49,8 @@ void drv_clrc663_cmd_LoadProtocol(const enum drv_clrc663_protocol_rx rx,
 	drv_clrc663_fifo_flush();
 
 	const uint8_t tx_buf[] = {
-		// clang-format off
-
-		[0]	= rx,
-		[1]	= tx
-
-		// clang-format on
+		[0] = rx,
+		[1] = tx,
 	};
 
 	drv_clrc663_fifo_write(tx_buf, sizeof(tx_buf));

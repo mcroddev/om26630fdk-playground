@@ -32,11 +32,6 @@ void board_nfc_init(void)
 	board_nfc_spi_init();
 
 	board_nfc_enable();
-
-#ifndef NDEBUG
-	const u8 ver = drv_clrc663_reg_read(DRV_CLRC663_REG_Version);
-	app_assert(ver == 0x1A);
-#endif // NDEBUG
 }
 
 void board_nfc_enable(void)
@@ -47,4 +42,9 @@ void board_nfc_enable(void)
 void board_nfc_disable(void)
 {
 	hal_gpio_pin_set_high(GPIO_PIN_CLRC_RST);
+}
+
+u8 board_nfc_get_device_version(void)
+{
+	return drv_clrc663_reg_read(DRV_CLRC663_REG_Version);
 }

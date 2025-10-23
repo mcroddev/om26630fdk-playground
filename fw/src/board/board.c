@@ -58,4 +58,9 @@ void board_init(void)
 	board_nfc_init();
 
 	board_clk_cfg();
+
+#ifndef NDEBUG
+	const u8 ver = board_nfc_get_device_version();
+	app_assert(ver == 0x1A);
+#endif // NDEBUG
 }
