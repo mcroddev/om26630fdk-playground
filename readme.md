@@ -10,4 +10,5 @@ It is developed entirely from the ground up, without relying on any vendor-provi
 code from NXP or ARM. The long-term goal is to create a reusable CLRC663 driver
 that can be easily integrated into other projects, along with PC software
 similar to [NFC Cockpit Configuration Tool for NFC ICs](https://www.nxp.com/design/design-center/development-boards-and-designs/nfc-cockpit-configuration-tool-for-nfc-ics:NFC-COCKPIT)
-to interface with the evaluation board and explore the full capabilities of the CLRC663.
+to interface with the evaluation board and explore the full capabilities of the
+CLRC663.
