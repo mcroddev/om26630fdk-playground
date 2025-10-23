@@ -31,7 +31,7 @@ void nfc_spi_init(void)
 		.data_size		= SPI_DATA_SIZE_8BIT,
 		.cpol			= SPI_CFG_MOTO_SPI_CPOL_LOW,
 		.cpha			= SPI_CFG_MOTO_SPI_CPHA_FIRST,
-		.prescaler		= 12,
+		.prescaler		= 24,
 		.serial_clk_rate	= 0
 
 		// clang-format on

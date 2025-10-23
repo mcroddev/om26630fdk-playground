@@ -22,10 +22,14 @@
 
 #include <stdlib.h>
 #include "board/board.h"
+#include "board/nfc/nfc.h"
 
 int main(void)
 {
 	board_init();
+
+	board_nfc_protocol_set(BOARD_NFC_PROTOCOL_MIFARE_106);
+	board_nfc_rf_field_enable();
 
 	for (;;)
 		;

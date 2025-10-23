@@ -24,9 +24,22 @@
 
 #include "common/types.h"
 
+enum board_nfc_protocol {
+	BOARD_NFC_PROTOCOL_MIFARE_106,
+	BOARD_NFC_PROTOCOL_MIFARE_212,
+	BOARD_NFC_PROTOCOL_MIFARE_424,
+	BOARD_NFC_PROTOCOL_MIFARE_848,
+	BOARD_NFC_PROTOCOL_NUM
+};
+
 void nfc_init(void);
 
 void board_nfc_enable(void);
 void board_nfc_disable(void);
+
+void board_nfc_protocol_set(enum board_nfc_protocol protocol);
+
+void board_nfc_rf_field_enable(void);
+void board_nfc_rf_field_disable(void);
 
 u8 board_nfc_get_device_version(void);

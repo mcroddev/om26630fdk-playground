@@ -10,15 +10,16 @@ behavior in any configuration and must instead be manually controlled as a GPIO
 pin.
 
 The CLRC663 supports a maximum SCLK frequency of 10 MHz. NXP’s reference
-firmware configures the SCLK at 4 MHz, though operation at 8 MHz has been
-verified without any observed issues.
+firmware configures the SCLK at 4 MHz, which we have decided to follow as it
+appears on this particular board 8 MHz is not stable, I have yet to figure out
+why.
 
 ## Oscilloscope captures
 
 All oscilloscope captures were taken on a [Rigol DHO804](https://www.rigolna.com/products/rigol-digital-oscilloscopes/dho800/),
 utilizing the standard probes at x10. Ground springs were not used, so the
 ringing and overshoot seen in the captures is likely to be a measurement setup
-issue. Otherwise, the signals are clean and well defined.
+issue. Otherwise, the signals are clean and well-defined.
 
 <figure>
 <img src="../assets/clrc663-sck.png">
