@@ -34,12 +34,12 @@ enum board_nfc_protocol {
 
 void nfc_init(void);
 
-void board_nfc_enable(void);
-void board_nfc_disable(void);
+void nfc_enable(void);
+void nfc_disable(void);
 
-void board_nfc_protocol_set(enum board_nfc_protocol protocol);
+void nfc_protocol_set(enum board_nfc_protocol protocol);
 
-void board_nfc_rf_field_enable(void);
-void board_nfc_rf_field_disable(void);
+void nfc_rf_field_enable(void);
+void nfc_rf_field_disable(void);
 
-u8 board_nfc_get_device_version(void);
+u8 nfc_get_device_version(void);

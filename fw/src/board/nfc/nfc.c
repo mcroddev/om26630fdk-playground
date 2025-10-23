@@ -45,36 +45,36 @@ void nfc_init(void)
 	nfc_gpio_init();
 	nfc_spi_init();
 
-	board_nfc_enable();
+	nfc_enable();
 }
 
-void board_nfc_enable(void)
+void nfc_enable(void)
 {
 	gpio_pin_set_low(GPIO_PIN_CLRC_RST);
 }
 
-void board_nfc_disable(void)
+void nfc_disable(void)
 {
 	gpio_pin_set_high(GPIO_PIN_CLRC_RST);
 }
 
-void board_nfc_protocol_set(const enum board_nfc_protocol protocol)
+void nfc_protocol_set(const enum board_nfc_protocol protocol)
 {
 	const struct protocol_pair *const proto = &protocol_tbl[protocol];
 	drv_clrc663_cmd_LoadProtocol(proto->rx, proto->tx);
 }
 
-void board_nfc_rf_field_enable(void)
+void nfc_rf_field_enable(void)
 {
 	drv_clrc663_reg_write(DRV_CLRC663_REG_DrvMode, 0x8E);
 }
 
-void board_nfc_rf_field_disable(void)
+void nfc_rf_field_disable(void)
 {
 	drv_clrc663_reg_write(DRV_CLRC663_REG_DrvMode, 0x00);
 }
 
-u8 board_nfc_get_device_version(void)
+u8 nfc_get_device_version(void)
 {
 	return drv_clrc663_reg_read(DRV_CLRC663_REG_Version);
 }
