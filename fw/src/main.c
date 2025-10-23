@@ -31,8 +31,9 @@ int main(void)
 	nfc_protocol_set(NFC_PROTOCOL_MIFARE_106);
 	nfc_rf_field_enable();
 
-	for (;;)
-		;
+	for (;;) {
+		board_tick();
+	}
 
 	return EXIT_FAILURE;
 }

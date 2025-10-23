@@ -24,6 +24,9 @@ set(SRCS
 	main.c
 	board/board.c
 	board/clk.c
+	board/ccc/ccc.c
+	board/ccc/gpio.c
+	board/ccc/usb.c
 	board/nfc/clrc663-spi-impl.c
 	board/nfc/gpio.c
 	board/nfc/nfc.c
@@ -36,6 +39,8 @@ set(SRCS
 	hal/spi.c
 	hal/startup.c
 	hal/sysctl.c
+	hal/usb.c
+	${CMAKE_SOURCE_DIR}/third-party/tinyusb/portable/nxp/lpc17_40/dcd_lpc17_40.c
 )
 
 set(HDRS
@@ -44,6 +49,10 @@ set(HDRS
 	common/util.h
 	board/board.h
 	board/clk.h
+	board/ccc/ccc.h
+	board/ccc/gpio.h
+	board/ccc/tusb_config.h
+	board/ccc/usb.h
 	board/nfc/gpio.h
 	board/nfc/nfc.h
 	board/nfc/spi.h
@@ -54,11 +63,27 @@ set(HDRS
 	hal/pincm.h
 	hal/spi.h
 	hal/sysctl.h
+	hal/usb.h
 	hal/util.h
 )
 add_executable(om26630fdk-playground-fw ${SRCS} ${HDRS})
 
-target_include_directories(om26630fdk-playground-fw PRIVATE .)
+tinyusb_target_add(om26630fdk-playground-fw)
+
+target_compile_definitions(
+	om26630fdk-playground-fw
+	PRIVATE
+	-DCFG_TUSB_MCU=OPT_MCU_LPC175X_6X
+	-DCFG_TUSB_CONFIG_FILE="${CMAKE_SOURCE_DIR}/src/board/ccc/tusb_config.h"
+)
+
+target_include_directories(
+	om26630fdk-playground-fw
+	PRIVATE
+	.
+	${CMAKE_SOURCE_DIR}/third-party/tinyusb
+	${CMAKE_SOURCE_DIR}/src/board/ccc/tusb-compat
+)
 
 toolchain_set_linker_script(
 	om26630fdk-playground-fw

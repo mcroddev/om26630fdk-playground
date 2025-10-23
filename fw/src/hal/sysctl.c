@@ -24,6 +24,10 @@
 #include "util.h"
 
 enum {
+	USBCLKCFG_MASK_USBSEL = BITMASK_FROM_RANGE(0, 3),
+};
+
+enum {
 	PLL_FEED_SEQ_FIRST = 0xAA,
 	PLL_FEED_SEQ_SECOND = 0x55,
 };
@@ -175,6 +179,13 @@ void sysctl_flash_access_time_set(
 {
 	mmio_rmw_mask32(SYSCTL_REG_FLASHCFG, FLASHCFG_FLASHTIM,
 			flash_access_time);
+}
+
+void sysctl_usbclk_set(const enum sysctl_usbclk clk)
+{
+	u32 USBCLKCFG = 0;
+	set_val_by_mask(USBCLKCFG, USBCLKCFG_MASK_USBSEL, clk);
+	mmio_write32(SYSCTL_REG_USBCLKCFG, USBCLKCFG);
 }
 
 void sysctl_clkout_cfg_set(const enum sysctl_clkout_clk_src clk_src,

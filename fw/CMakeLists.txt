@@ -47,4 +47,5 @@ if (CMAKE_VERSION LESS "3.26")
 	set(GLOBAL PROPERTY USE_FOLDERS ON)
 endif()
 
+add_subdirectory(third-party/tinyusb)
 add_subdirectory(src)

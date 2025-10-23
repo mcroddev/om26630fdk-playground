@@ -202,3 +202,5 @@ void sysctl_cclk_cfg(const struct sysctl_pll_cfg *cfg);
 
 void sysctl_flash_access_time_set(
 	enum sysctl_flash_access_time flash_access_time);
+
+void sysctl_usbclk_set(enum sysctl_usbclk clk);

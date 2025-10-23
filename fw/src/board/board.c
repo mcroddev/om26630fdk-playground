@@ -21,6 +21,7 @@
 // SOFTWARE.
 
 #include "board/nfc/nfc.h"
+#include "board/ccc/ccc.h"
 
 #include "hal/sysctl.h"
 #include "hal/gpio.h"
@@ -57,6 +58,7 @@ void board_init(void)
 	// activate PLL0.
 	gpio_init();
 	nfc_init();
+	ccc_init();
 
 	clk_init();
 
@@ -64,4 +66,9 @@ void board_init(void)
 	const u8 ver = nfc_get_device_version();
 	app_assert(ver == 0x1A);
 #endif // NDEBUG
+}
+
+void board_tick(void)
+{
+	ccc_tick();
 }

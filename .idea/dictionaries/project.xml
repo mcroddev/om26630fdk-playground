@@ -3,11 +3,14 @@
     <words>
       <w>addr</w>
       <w>authent</w>
+      <w>bufsize</w>
       <w>canact</w>
       <w>cclk</w>
       <w>cclkcfg</w>
       <w>cclkdiv</w>
       <w>cclksel</w>
+      <w>clkhi</w>
+      <w>clklo</w>
       <w>clkout</w>
       <w>clkoutcfg</w>
       <w>clkoutdiv</w>
@@ -22,6 +25,7 @@
       <w>deps</w>
       <w>dmacr</w>
       <w>eint</w>
+      <w>epnum</w>
       <w>fioclr</w>
       <w>fiodir</w>
       <w>fiomask</w>
@@ -34,8 +38,10 @@
       <w>icpr</w>
       <w>imsc</w>
       <w>iser</w>
+      <w>langid</w>
       <w>lpcd</w>
       <w>mcpwm</w>
+      <w>mcrod</w>
       <w>miso</w>
       <w>mmio</w>
       <w>mosi</w>
@@ -52,6 +58,7 @@
       <w>pconp</w>
       <w>pcssp</w>
       <w>pcuart</w>
+      <w>pcusb</w>
       <w>picolibc</w>
       <w>pincm</w>
       <w>pinmode</w>
@@ -65,12 +72,16 @@
       <w>sclk</w>
       <w>spdx</w>
       <w>ssel</w>
+      <w>strid</w>
       <w>subc</w>
       <w>syscon</w>
+      <w>tinyusb</w>
+      <w>tusb</w>
       <w>txim</w>
       <w>usbact</w>
       <w>usbclk</w>
       <w>usbclkcfg</w>
+      <w>usbsel</w>
       <w>xtal</w>
     </words>
   </dictionary>
