@@ -78,3 +78,8 @@ u8 nfc_get_device_version(void)
 {
 	return drv_clrc663_reg_read(DRV_CLRC663_REG_Version);
 }
+
+u8 nfc_read_reg(const u8 byte)
+{
+	return drv_clrc663_reg_read(byte);
+}

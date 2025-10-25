@@ -22,5 +22,17 @@
 
 #pragma once
 
+#include <stdbool.h>
+#include "common/types.h"
+
+enum {
+	CCC_USB_RX_SIZE_MAX = 64,
+	CCC_USB_TX_SIZE_MAX = 64
+};
+
 void ccc_usb_init(void);
 void ccc_usb_tick(void);
+
+bool ccc_cdc_read_byte(u8 *dst);
+
+bool ccc_cdc_write_byte(u8 byte);

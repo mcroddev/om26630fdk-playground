@@ -22,26 +22,4 @@
 
 #pragma once
 
-#include "common/types.h"
-
-enum nfc_protocol {
-	NFC_PROTOCOL_MIFARE_106,
-	NFC_PROTOCOL_MIFARE_212,
-	NFC_PROTOCOL_MIFARE_424,
-	NFC_PROTOCOL_MIFARE_848,
-	NFC_PROTOCOL_NUM
-};
-
-void nfc_init(void);
-
-void nfc_enable(void);
-void nfc_disable(void);
-
-void nfc_protocol_set(enum nfc_protocol protocol);
-
-void nfc_rf_field_enable(void);
-void nfc_rf_field_disable(void);
-
-u8 nfc_read_reg(u8 reg);
-
-u8 nfc_get_device_version(void);
+void task_ccc_tick(void);

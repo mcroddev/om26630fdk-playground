@@ -126,6 +126,28 @@ void ccc_usb_tick(void)
 	tud_task();
 }
 
+bool ccc_cdc_read_byte(u8 *const dst)
+{
+	const int32_t ch = tud_cdc_n_read_char(ITF_NUM_CDC_0);
+
+	if (ch != -1) {
+		*dst = ch;
+		return true;
+	}
+	return false;
+}
+
+bool ccc_cdc_write_byte(const u8 byte)
+{
+	if (tud_cdc_n_connected(ITF_NUM_CDC_0)) {
+		tud_cdc_n_write_char(ITF_NUM_CDC_0, byte);
+		tud_cdc_n_write_flush(ITF_NUM_CDC_0);
+
+		return true;
+	}
+	return false;
+}
+
 u8 const *tud_descriptor_device_cb(void)
 {
 	return (u8 const *)&dev;

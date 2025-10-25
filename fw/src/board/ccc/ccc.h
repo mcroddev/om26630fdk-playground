@@ -22,5 +22,7 @@
 
 #pragma once
 
+#include "usb.h"
+
 void ccc_init(void);
 void ccc_tick(void);

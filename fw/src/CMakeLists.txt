@@ -22,6 +22,7 @@
 
 set(SRCS
 	main.c
+	task-ccc.c
 	board/board.c
 	board/clk.c
 	board/ccc/ccc.c
@@ -65,6 +66,7 @@ set(HDRS
 	hal/sysctl.h
 	hal/usb.h
 	hal/util.h
+	task-ccc.h
 )
 add_executable(om26630fdk-playground-fw ${SRCS} ${HDRS})
 

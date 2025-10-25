@@ -21,18 +21,17 @@
 // SOFTWARE.
 
 #include <stdlib.h>
+
 #include "board/board.h"
-#include "board/nfc/nfc.h"
+#include "task-ccc.h"
 
 int main(void)
 {
 	board_init();
 
-	nfc_protocol_set(NFC_PROTOCOL_MIFARE_106);
-	nfc_rf_field_enable();
-
 	for (;;) {
 		board_tick();
+		task_ccc_tick();
 	}
 
 	return EXIT_FAILURE;
