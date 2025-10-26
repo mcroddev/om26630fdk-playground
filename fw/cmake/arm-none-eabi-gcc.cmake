@@ -57,8 +57,47 @@ execute_process(
 set(COMPILER_FLAGS
 	--crt0=minimal
 	-Wall
+	-Walloc-zero
+	-Walloca
+	-Wcast-qual
+	-Wdate-time
+	-Wdisabled-optimization
+	-Wdouble-promotion
+	-Wduplicated-branches
+	-Wduplicated-cond
 	-Wextra
+	-Wfloat-equal
+	-Wformat-overflow=2
+	-Wformat-signedness
+	-Wformat-truncation=2
+	-Wformat=2
+	-Winit-self
+	-Winline
+	-Winvalid-pch
+	-Wjump-misses-init
 	-Wl,--gc-sections,-Map=om26630fdk-playground-fw.map,--no-warn-rwx-segments
+	-Wlogical-op
+	-Wmain
+	-Wmissing-declarations
+	-Wmissing-include-dirs
+	-Wmissing-prototypes
+	-Wno-aggressive-loop-optimizations
+	-Wnull-dereference
+	-Wpacked
+	-Wpointer-sign
+	-Wredundant-decls
+	-Wshadow
+	-Wshift-overflow=2
+	-Wstrict-prototypes
+	-Wswitch-default
+	-Wtrampolines
+	-Wundef
+	-Wunknown-pragmas
+	-Wunsafe-loop-optimizations
+	-Wunsuffixed-float-constants
+	-Wvector-operation-performance
+	-Wvla
+	-Wwrite-strings
 	-fdata-sections
 	-ffunction-sections
 	-mcpu=cortex-m3

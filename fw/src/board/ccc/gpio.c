@@ -21,6 +21,7 @@
 // SOFTWARE.
 
 #include "hal/gpio.h"
+#include "gpio.h"
 
 // clang-format off
 
