@@ -1,0 +1,1074 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BackendCodeEditorMiscSettings">
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="15" type="long" />
+    <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
+    <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppFormatterOtherPage" type="string" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
+  <component name="CMakeProjectFlavorService">
+    <option name="flavorId" value="CMakePlainProjectFlavor" />
+  </component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated>
+      <config projectName="om26630fdk-playground-fw" targetName="om26630fdk-playground-fw" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="false" CONFIG_NAME="Debug" />
+      <configuration PROFILE_NAME="cfg-dbg-gcc" ENABLED="true" FROM_PRESET="true" GENERATION_DIR="$PROJECT_DIR$/fw/build-dbg-gcc" />
+      <configuration PROFILE_NAME="cfg-rel-gcc" ENABLED="true" FROM_PRESET="true" GENERATION_DIR="$PROJECT_DIR$/fw/build-rel-gcc" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="38aee0bb-485f-4c0d-82af-673b6d6ca498" name="Changes" comment="Handle the &quot;UART&quot; one byte at a time for now" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddedSvdWindowState">
+    <option name="columnWidths">
+      <list>
+        <option value="262" />
+        <option value="737" />
+        <option value="0" />
+      </list>
+    </option>
+    <option name="columnOrder">
+      <list>
+        <option value="Name" />
+        <option value="Value" />
+        <option value="Description" />
+      </list>
+    </option>
+    <option name="loadedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/fw/LPC176x5x.svd" />
+      </list>
+    </option>
+    <option name="nodes">
+      <map>
+        <entry key="LPC176x5x.svd" value="-E" />
+        <entry key="LPC176x5x.svd|g:CAN" value="-C" />
+        <entry key="LPC176x5x.svd|g:I2C" value="-C" />
+        <entry key="LPC176x5x.svd|g:TIMER0" value="-C" />
+        <entry key="LPC176x5x.svd|g:UART0" value="-C" />
+        <entry key="LPC176x5x.svd|p:ADC" value="-C" />
+        <entry key="LPC176x5x.svd|p:ADC|CR" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|DR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|DR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|DR[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|DR[3]" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|DR[4]" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|DR[5]" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|DR[6]" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|DR[7]" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|GDR" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|INTEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|STAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:ADC|TRM" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1" value="-C" />
+        <entry key="LPC176x5x.svd|p:CAN1|BTR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|CMR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|EWL" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|GSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|ICR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|IER" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|MOD" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|RDA" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|RDB" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|RFS" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|RID" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|SR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TDA1" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TDA2" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TDA3" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TDB1" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TDB2" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TDB3" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TFI1" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TFI2" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TFI3" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TID1" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TID2" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN1|TID3" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2" value="-C" />
+        <entry key="LPC176x5x.svd|p:CAN2|BTR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|CMR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|EWL" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|GSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|ICR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|IER" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|MOD" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|RDA" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|RDB" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|RFS" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|RID" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|SR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TDA1" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TDA2" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TDA3" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TDB1" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TDB2" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TDB3" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TFI1" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TFI2" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TFI3" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TID1" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TID2" value="HC" />
+        <entry key="LPC176x5x.svd|p:CAN2|TID3" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF" value="-C" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM" value="-C" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[100]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[101]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[102]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[103]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[104]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[105]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[106]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[107]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[108]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[109]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[10]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[110]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[111]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[112]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[113]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[114]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[115]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[116]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[117]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[118]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[119]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[11]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[120]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[121]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[122]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[123]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[124]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[125]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[126]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[127]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[128]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[129]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[12]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[130]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[131]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[132]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[133]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[134]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[135]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[136]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[137]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[138]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[139]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[13]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[140]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[141]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[142]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[143]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[144]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[145]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[146]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[147]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[148]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[149]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[14]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[150]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[151]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[152]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[153]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[154]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[155]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[156]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[157]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[158]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[159]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[15]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[160]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[161]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[162]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[163]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[164]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[165]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[166]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[167]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[168]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[169]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[16]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[170]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[171]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[172]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[173]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[174]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[175]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[176]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[177]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[178]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[179]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[17]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[180]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[181]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[182]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[183]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[184]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[185]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[186]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[187]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[188]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[189]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[18]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[190]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[191]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[192]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[193]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[194]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[195]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[196]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[197]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[198]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[199]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[19]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[20]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[21]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[22]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[23]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[24]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[25]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[26]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[27]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[28]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[29]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[30]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[31]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[32]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[33]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[34]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[35]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[36]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[37]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[38]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[39]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[3]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[40]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[41]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[42]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[43]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[44]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[45]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[46]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[47]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[48]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[49]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[4]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[50]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[51]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[52]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[53]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[54]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[55]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[56]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[57]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[58]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[59]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[5]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[60]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[61]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[62]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[63]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[64]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[65]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[66]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[67]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[68]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[69]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[6]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[70]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[71]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[72]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[73]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[74]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[75]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[76]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[77]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[78]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[79]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[7]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[80]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[81]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[82]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[83]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[84]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[85]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[86]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[87]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[88]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[89]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[8]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[90]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[91]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[92]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[93]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[94]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[95]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[96]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[97]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[98]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[99]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAFRAM|MASK[9]" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|AFMR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|EFF_GRP_SA" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|EFF_SA" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|ENDOFTABLE" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|FCANIC0" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|FCANIC1" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|FCANIE" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|LUTERR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|LUTERRAD" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|SFF_GRP_SA" value="HC" />
+        <entry key="LPC176x5x.svd|p:CANAF|SFF_SA" value="HC" />
+        <entry key="LPC176x5x.svd|p:CCAN" value="-C" />
+        <entry key="LPC176x5x.svd|p:CCAN|MSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CCAN|RXSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:CCAN|TXSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:DAC" value="-C" />
+        <entry key="LPC176x5x.svd|p:DAC|CNTVAL" value="HC" />
+        <entry key="LPC176x5x.svd|p:DAC|CR" value="HC" />
+        <entry key="LPC176x5x.svd|p:DAC|CTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC" value="-C" />
+        <entry key="LPC176x5x.svd|p:EMAC|CLRT" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|COMMAND" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|FLOWCONTROLCOUNTER" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|FLOWCONTROLSTATUS" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|HASHFILTERH" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|HASHFILTERL" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|INTCLEAR" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|INTENABLE" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|INTSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|INTSTATUS" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|IPGR" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|IPGT" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|MAC1" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|MAC2" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|MADR" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|MAXF" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|MCFG" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|MCMD" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|MIND" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|MRDD" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|MWTD" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|POWERDOWN" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|RSV" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|RXCONSUMEINDEX" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|RXDESCRIPTOR" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|RXDESCRIPTORNUMBER" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|RXFILTERCTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|RXFILTERWOLCLEAR" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|RXFILTERWOLSTATUS" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|RXPRODUCEINDEX" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|RXSTATUS" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|SA0" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|SA1" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|SA2" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|STATUS" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|SUPP" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|TEST" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|TSV0" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|TSV1" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|TXCONSUMEINDEX" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|TXDESCRIPTOR" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|TXDESCRIPTORNUMBER" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|TXPRODUCEINDEX" value="HC" />
+        <entry key="LPC176x5x.svd|p:EMAC|TXSTATUS" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA" value="-C" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONFIG" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONFIG0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONFIG1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONFIG2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONFIG3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONFIG4" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONFIG5" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONFIG6" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONFIG7" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONTROL0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONTROL1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONTROL2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONTROL3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONTROL4" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONTROL5" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONTROL6" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|CONTROL7" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|DESTADDR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|DESTADDR1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|DESTADDR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|DESTADDR3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|DESTADDR4" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|DESTADDR5" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|DESTADDR6" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|DESTADDR7" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|ENBLDCHNS" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|INTERRCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|INTERRSTAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|INTSTAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|INTTCCLEAR" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|INTTCSTAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|LLI0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|LLI1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|LLI2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|LLI3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|LLI4" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|LLI5" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|LLI6" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|LLI7" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|RAWINTERRSTAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|RAWINTTCSTAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SOFTBREQ" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SOFTLBREQ" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SOFTLSREQ" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SOFTSREQ" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SRCADDR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SRCADDR1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SRCADDR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SRCADDR3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SRCADDR4" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SRCADDR5" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SRCADDR6" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SRCADDR7" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPDMA|SYNC" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO" value="-C" />
+        <entry key="LPC176x5x.svd|p:GPIOINT" value="-C" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|CLR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|CLR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|ENF0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|ENF2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|ENR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|ENR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|STATF0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|STATF2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|STATR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|STATR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIOINT|STATUS" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|CLR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|CLR1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|CLR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|CLR3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|CLR4" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|DIR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|DIR1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|DIR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|DIR3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|DIR4" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|MASK0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|MASK1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|MASK2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|MASK3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|MASK4" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|PIN0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|PIN1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|PIN2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|PIN3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|PIN4" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|SET0" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|SET1" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|SET2" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|SET3" value="HC" />
+        <entry key="LPC176x5x.svd|p:GPIO|SET4" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0" value="-C" />
+        <entry key="LPC176x5x.svd|p:I2C0|ADR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|ADR1" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|ADR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|ADR3" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|CONCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|CONSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|DAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|DATA_BUFFER" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|MASK[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|MASK[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|MASK[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|MASK[3]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|MMCTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|SCLH" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|SCLL" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C0|STAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1" value="-C" />
+        <entry key="LPC176x5x.svd|p:I2C1|ADR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|ADR1" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|ADR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|ADR3" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|CONCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|CONSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|DAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|DATA_BUFFER" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|MASK[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|MASK[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|MASK[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|MASK[3]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|MMCTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|SCLH" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|SCLL" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C1|STAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2" value="-C" />
+        <entry key="LPC176x5x.svd|p:I2C2|ADR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|ADR1" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|ADR2" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|ADR3" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|CONCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|CONSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|DAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|DATA_BUFFER" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|MASK[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|MASK[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|MASK[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|MASK[3]" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|MMCTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|SCLH" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|SCLL" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2C2|STAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S" value="-C" />
+        <entry key="LPC176x5x.svd|p:I2S|DAI" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|DAO" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|DMA1" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|DMA2" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|IRQ" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|RXBITRATE" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|RXFIFO" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|RXMODE" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|RXRATE" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|STATE" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|TXBITRATE" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|TXFIFO" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|TXMODE" value="HC" />
+        <entry key="LPC176x5x.svd|p:I2S|TXRATE" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM" value="-C" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CAPCON" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CAPCON_CLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CAPCON_SET" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CAP[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CAP[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CAP[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CAP_CLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CNTCON" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CNTCON_CLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CNTCON_SET" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CON" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CON_CLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CON_SET" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|CP" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|DT" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|INTEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|INTEN_CLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|INTEN_SET" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|INTF" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|INTF_CLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|INTF_SET" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|LIM[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|LIM[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|LIM[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|MAT[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|MAT[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|MAT[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|TC[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|TC[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:MCPWM|TC[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT" value="-C" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|I2CPADCFG" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE0" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE1" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE2" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE3" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE4" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE7" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE9" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE_OD0" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE_OD1" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE_OD2" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE_OD3" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINMODE_OD4" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINSEL0" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINSEL1" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINSEL10" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINSEL2" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINSEL3" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINSEL4" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINSEL7" value="HC" />
+        <entry key="LPC176x5x.svd|p:PINCONNECT|PINSEL9" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1" value="-C" />
+        <entry key="LPC176x5x.svd|p:PWM1|CCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|CR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|CR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|CTCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|IR" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|LER" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|MCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|MR4" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|MR5" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|MR6" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|PC" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|PCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|PR" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|TC" value="HC" />
+        <entry key="LPC176x5x.svd|p:PWM1|TCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI" value="-C" />
+        <entry key="LPC176x5x.svd|p:QEI|CAP" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|CLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|CMPOS0" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|CMPOS1" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|CMPOS2" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|CON" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|CONF" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|FILTER" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|IE" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|IEC" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|IES" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|INTSTAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|INXCMP0" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|INXCNT" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|LOAD" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|MAXPOS" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|POS" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|SET" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|STAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|TIME" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|VEL" value="HC" />
+        <entry key="LPC176x5x.svd|p:QEI|VELCOMP" value="HC" />
+        <entry key="LPC176x5x.svd|p:RITIMER" value="-C" />
+        <entry key="LPC176x5x.svd|p:RITIMER|COMPVAL" value="HC" />
+        <entry key="LPC176x5x.svd|p:RITIMER|COUNTER" value="HC" />
+        <entry key="LPC176x5x.svd|p:RITIMER|CTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:RITIMER|MASK" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC" value="-C" />
+        <entry key="LPC176x5x.svd|p:RTC|ADOM" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|ADOW" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|ADOY" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|AHRS" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|AMIN" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|AMON" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|AMR" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|ASEC" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|AYRS" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|CALIBRATION" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|CCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|CIIR" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|CTIME0" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|CTIME1" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|CTIME2" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|DOM" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|DOW" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|DOY" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|GPREG0" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|GPREG1" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|GPREG2" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|GPREG3" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|GPREG4" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|HRS" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|ILR" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|MIN" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|MONTH" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|RTC_AUX" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|RTC_AUXEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|SEC" value="HC" />
+        <entry key="LPC176x5x.svd|p:RTC|YEAR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SPI" value="-C" />
+        <entry key="LPC176x5x.svd|p:SPI|CCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SPI|CR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SPI|DR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SPI|INT" value="HC" />
+        <entry key="LPC176x5x.svd|p:SPI|SR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0" value="-E" />
+        <entry key="LPC176x5x.svd|p:SSP0|CPSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0|CR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0|CR1" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0|DMACR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0|DR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0|ICR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0|IMSC" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0|MIS" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0|RIS" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP0|SR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1" value="-C" />
+        <entry key="LPC176x5x.svd|p:SSP1|CPSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1|CR0" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1|CR1" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1|DMACR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1|DR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1|ICR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1|IMSC" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1|MIS" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1|RIS" value="HC" />
+        <entry key="LPC176x5x.svd|p:SSP1|SR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON" value="-C" />
+        <entry key="LPC176x5x.svd|p:SYSCON|CANSLEEPCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|CANWAKEFLAGS" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|CCLKCFG" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|CLKOUTCFG" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|CLKSRCSEL" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|DMACREQSEL" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|EXTINT" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|EXTMODE" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|EXTPOLAR" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|FLASHCFG" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PCLKSEL0" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PCLKSEL1" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PCON" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PCONP" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PLL0CFG" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PLL0CON" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PLL0FEED" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PLL0STAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PLL1CFG" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PLL1CON" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PLL1FEED" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|PLL1STAT" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|RSID" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|SCS" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|USBCLKCFG" value="HC" />
+        <entry key="LPC176x5x.svd|p:SYSCON|USBINTST" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0" value="-C" />
+        <entry key="LPC176x5x.svd|p:TIMER0|CCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|CR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|CR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|CTCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|EMR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|IR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|MCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|MR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|MR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|MR[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|MR[3]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|PC" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|PR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|TC" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER0|TCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1" value="-C" />
+        <entry key="LPC176x5x.svd|p:TIMER1|CCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|CR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|CR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|CTCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|EMR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|IR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|MCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|MR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|MR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|MR[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|MR[3]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|PC" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|PR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|TC" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER1|TCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2" value="-C" />
+        <entry key="LPC176x5x.svd|p:TIMER2|CCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|CR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|CR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|CTCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|EMR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|IR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|MCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|MR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|MR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|MR[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|MR[3]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|PC" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|PR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|TC" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER2|TCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3" value="-C" />
+        <entry key="LPC176x5x.svd|p:TIMER3|CCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|CR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|CR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|CTCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|EMR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|IR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|MCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|MR[0]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|MR[1]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|MR[2]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|MR[3]" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|PC" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|PR" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|TC" value="HC" />
+        <entry key="LPC176x5x.svd|p:TIMER3|TCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0" value="-C" />
+        <entry key="LPC176x5x.svd|p:UART0|ACR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|DLL" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|DLM" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|FCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|FDR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|IER" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|IIR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|LCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|LSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|RBR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|RS485ADRMATCH" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|RS485CTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|RS485DLY" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|SCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|TER" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART0|THR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1" value="-C" />
+        <entry key="LPC176x5x.svd|p:UART1|ACR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|DLL" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|DLM" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|FCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|FDR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|IER" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|IIR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|LCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|LSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|MCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|MSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|RBR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|RS485ADRMATCH" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|RS485CTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|RS485DLY" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|SCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|TER" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART1|THR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2" value="-C" />
+        <entry key="LPC176x5x.svd|p:UART2|ACR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|DLL" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|DLM" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|FCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|FDR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|IER" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|IIR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|LCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|LSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|RBR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|RS485ADRMATCH" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|RS485CTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|RS485DLY" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|SCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|TER" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART2|THR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3" value="-C" />
+        <entry key="LPC176x5x.svd|p:UART3|ACR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|DLL" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|DLM" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|FCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|FDR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|IER" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|IIR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|LCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|LSR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|RBR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|RS485ADRMATCH" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|RS485CTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|RS485DLY" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|SCR" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|TER" value="HC" />
+        <entry key="LPC176x5x.svd|p:UART3|THR" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB" value="-C" />
+        <entry key="LPC176x5x.svd|p:USB|CMDCODE" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|CMDDATA" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|CTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DEVINTCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DEVINTEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DEVINTPRI" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DEVINTSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DEVINTST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DMAINTEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DMAINTST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DMARCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DMARSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|DMARST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EOTINTCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EOTINTSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EOTINTST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EPDMADIS" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EPDMAEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EPDMAST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EPIND" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EPINTCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EPINTEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EPINTPRI" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EPINTSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|EPINTST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|I2C_CLKHI" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|I2C_CLKLO" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|I2C_CTL" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|I2C_RX" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|I2C_STS" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|I2C_WO" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|INTCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|INTEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|INTSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|INTST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|MAXPSIZE" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|NDDRINTCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|NDDRINTSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|NDDRINTST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|OTGCLKCTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|OTGCLKST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|REEP" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|RXDATA" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|RXPLEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|STCTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|SYSERRINTCLR" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|SYSERRINTSET" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|SYSERRINTST" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|TMR" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|TXDATA" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|TXPLEN" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|UDCAH" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|USBCLKCTRL" value="HC" />
+        <entry key="LPC176x5x.svd|p:USB|USBCLKST" value="HC" />
+        <entry key="LPC176x5x.svd|p:WDT" value="-C" />
+        <entry key="LPC176x5x.svd|p:WDT|CLKSEL" value="HC" />
+        <entry key="LPC176x5x.svd|p:WDT|FEED" value="HC" />
+        <entry key="LPC176x5x.svd|p:WDT|MOD" value="HC" />
+        <entry key="LPC176x5x.svd|p:WDT|TC" value="HC" />
+        <entry key="LPC176x5x.svd|p:WDT|TV" value="HC" />
+      </map>
+    </option>
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:cfg-dbg-gcc" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mcroddev&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:/mcroddev/om26630fdk-playground.git&quot;,
+    &quot;accountId&quot;: &quot;47de2863-6a40-472c-9a25-6784f80b1ab5&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/mcrod/CLionProjects/om26630fdk-playground/fw/src/board/ccc/ccc.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/mcrod/CLionProjects/om26630fdk-playground/fw/src/board/ccc/usb.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/mcrod/CLionProjects/om26630fdk-playground/fw/src/board/ccc/usb.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/mcrod/CLionProjects/om26630fdk-playground/fw/src/board/nfc/nfc.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/mcrod/CLionProjects/om26630fdk-playground/fw/src/board/nfc/nfc.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///home/mcrod/CLionProjects/om26630fdk-playground/fw/src/main.c" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="2.3" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="34OVUHx6gowTiqBaXSuidPgBQih" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "CMake Application.om26630fdk-playground-fw.executor": "Debug",
+    "OpenOCD Download & Run.om26630fdk-playground-fw.executor": "Debug",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/mcrod/CLionProjects/om26630fdk-playground/ccc",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/fw" />
+      <recent name="$PROJECT_DIR$/fw/src/common" />
+      <recent name="$PROJECT_DIR$/fw/src" />
+      <recent name="$PROJECT_DIR$/fw/src/board" />
+    </key>
+  </component>
+  <component name="RunManager" selected="OpenOCD Download &amp; Run.om26630fdk-playground-fw">
+    <configuration name="om26630fdk-playground-fw" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="om26630fdk-playground-fw" TARGET_NAME="om26630fdk-playground-fw" CONFIG_NAME="cfg-dbg-gcc" RUN_TARGET_PROJECT_NAME="om26630fdk-playground-fw" RUN_TARGET_NAME="om26630fdk-playground-fw">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="om26630fdk-playground-fw" type="com.jetbrains.cidr.embedded.openocd.conf.type" factoryName="com.jetbrains.cidr.embedded.openocd.conf.factory" nameIsGenerated="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="om26630fdk-playground-fw" TARGET_NAME="om26630fdk-playground-fw" CONFIG_NAME="cfg-dbg-gcc" version="1" RUN_TARGET_PROJECT_NAME="om26630fdk-playground-fw" RUN_TARGET_NAME="om26630fdk-playground-fw">
+      <openocd version="1" gdb-port="3333" telnet-port="4444" board-config="$PROJECT_DIR$/fw/fw-openocd.cfg" reset-type="INIT" download-type="ALWAYS">
+        <debugger kind="GDB" isBundled="true" />
+      </openocd>
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.om26630fdk-playground-fw" />
+      <item itemvalue="OpenOCD Download &amp; Run.om26630fdk-playground-fw" />
+    </list>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="38aee0bb-485f-4c0d-82af-673b6d6ca498" name="Changes" comment="" />
+      <created>1761084620146</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1761084620146</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Initial commit&#10;&#10;This is just real basic stuff, nothing interesting." />
+    <MESSAGE value="Add basic firmware entry point&#10;&#10;More to come..." />
+    <MESSAGE value="Add initial project files" />
+    <MESSAGE value="Check the CLRC663 device version after init&#10;&#10;If we check the CLRC663 device version at device&#10;init time, the clock configuration will be inaccurate&#10;due to board errata. We need to wait until the clock&#10;configuration is set before talking to the device." />
+    <MESSAGE value="Add CLRC663 SCLK traces" />
+    <MESSAGE value="Remove HAL_ prefixes&#10;&#10;It's getting too verbose." />
+    <MESSAGE value="Enable RF field and set CLRC663 SPI SCLK to 4MHz" />
+    <MESSAGE value="Remove some board_* namespacing" />
+    <MESSAGE value="Remove BOARD_NFC_PROTOCOL namespacing" />
+    <MESSAGE value="Add TinyUSB" />
+    <MESSAGE value="Handle the &quot;UART&quot; one byte at a time for now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Handle the &quot;UART&quot; one byte at a time for now" />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="com.jetbrains.cidr.embedded.openocd.conf.type">
+        <watch expression="ccc_task" language="C++" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
