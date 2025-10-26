@@ -20,39 +20,15 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#include "clrc663.h"
-#include "clrc663-spi.h"
+#ifndef CLRC663_SPI_H
+#define CLRC663_SPI_H
 
-enum {
-	REG_WRITE,
-	REG_READ,
-	DUMMY_BYTE = UINT8_C(0xDB),
-};
+#include <stdint.h>
 
-uint8_t drv_clrc663_reg_read(const enum drv_clrc663_reg reg)
-{
-	const uint8_t tx[] = {
-		[0] = (reg << 1) | REG_READ,
-		[1] = DUMMY_BYTE,
-	};
+extern void drv_clrc663_nss_pin_set_low(void);
+extern void drv_clrc663_nss_pin_set_high(void);
+extern void drv_clrc663_spi_tx_blocking(const uint8_t *src, size_t src_size);
+extern void drv_clrc663_spi_tx_rx_blocking(const uint8_t *src, uint8_t *dst,
+					   size_t size);
 
-	uint8_t rx[2];
-
-	drv_clrc663_nss_pin_set_low();
-	drv_clrc663_spi_tx_rx_blocking(tx, rx, 2);
-	drv_clrc663_nss_pin_set_high();
-
-	return rx[1];
-}
-
-void drv_clrc663_reg_write(const enum drv_clrc663_reg reg, const uint8_t val)
-{
-	const uint8_t tx[] = {
-		[0] = (reg << 1) | REG_WRITE,
-		[1] = val,
-	};
-
-	drv_clrc663_nss_pin_set_low();
-	drv_clrc663_spi_tx_blocking(tx, 2);
-	drv_clrc663_nss_pin_set_high();
-}
+#endif // CLRC663_SPI_H

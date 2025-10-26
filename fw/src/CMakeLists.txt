@@ -59,6 +59,7 @@ set(HDRS
 	board/nfc/spi.h
 	drivers/clrc663/clrc663.h
 	drivers/clrc663/clrc663-cmd.h
+	drivers/clrc663/clrc663-spi.h
 	hal/gpio.h
 	hal/nvic.h
 	hal/pincm.h

@@ -22,6 +22,8 @@
 
 #include <stddef.h>
 
+#include "drivers/clrc663/clrc663-spi.h"
+
 #include "gpio.h"
 #include "spi.h"
 

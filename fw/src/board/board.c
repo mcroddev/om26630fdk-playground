@@ -22,6 +22,7 @@
 
 #include "board/nfc/nfc.h"
 #include "board/ccc/ccc.h"
+#include "board.h"
 
 #include "hal/sysctl.h"
 #include "hal/gpio.h"

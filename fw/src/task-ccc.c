@@ -25,6 +25,7 @@
 #include "common/types.h"
 #include "common/util.h"
 #include "hal/util.h"
+#include "task-ccc.h"
 
 static void cmd_reg_read(void);
 static void cmd_reg_write(void);

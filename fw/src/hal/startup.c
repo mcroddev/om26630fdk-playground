@@ -130,7 +130,7 @@ ISR_FUNC void isr_PLL1(void);
 ISR_FUNC void isr_USBACT(void);
 ISR_FUNC void isr_CANACT(void);
 
-void isr_unhandled(void)
+static void isr_unhandled(void)
 {
 	for (;;)
 		;
