@@ -84,7 +84,6 @@ target_include_directories(
 	om26630fdk-playground-fw
 	PRIVATE
 	.
-	${CMAKE_SOURCE_DIR}/third-party/tinyusb
 	${CMAKE_SOURCE_DIR}/src/board/ccc/tusb-compat
 )
 
