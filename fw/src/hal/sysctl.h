@@ -198,7 +198,7 @@ void sysctl_clkout_cfg_set(enum sysctl_clkout_clk_src clk_src,
 			   enum sysctl_clkout_clk_div clk_div);
 
 void sysctl_main_osc_enable(enum sysctl_main_osc_range osc_range);
-void sysctl_cclk_cfg(const struct sysctl_pll_cfg *cfg);
+void sysctl_pll0_cclk_cfg(const struct sysctl_pll_cfg *cfg);
 
 void sysctl_flash_access_time_set(
 	enum sysctl_flash_access_time flash_access_time);

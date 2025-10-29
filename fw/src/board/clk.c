@@ -48,7 +48,7 @@ void clk_init(void)
 
 		// clang-format on
 	};
-	sysctl_cclk_cfg(&pll_cfg);
+	sysctl_pll0_cclk_cfg(&pll_cfg);
 
 	// We're now running at 48MHz; adjust the flash access time.
 	sysctl_flash_access_time_set(SYSCTL_FLASH_ACCESS_TIME_CLK_4);

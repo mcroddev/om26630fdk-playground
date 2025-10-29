@@ -105,7 +105,7 @@ void sysctl_main_osc_enable(const enum sysctl_main_osc_range osc_range)
 		nop();
 }
 
-void sysctl_cclk_cfg(const struct sysctl_pll_cfg *const cfg)
+void sysctl_pll0_cclk_cfg(const struct sysctl_pll_cfg *const cfg)
 {
 	// The following sequence must be followed step by step in order to have
 	// PLL0 initialized and running:
