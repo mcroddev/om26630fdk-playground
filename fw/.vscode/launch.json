@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "${command:cmake.launchTargetPath}",
+            "name": "Debug with OpenOCD",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "fw-openocd.cfg"
+            ],
+            "runToEntryPoint": "main",
+	    "svdFile": "LPC176x5x.svd"
+        }
+    ]
+}

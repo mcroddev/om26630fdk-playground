@@ -1,0 +1,11 @@
+{
+    "cmake.copyCompileCommands": "${workspaceFolder}/compile_commands.json",
+    "editor.rulers": [
+        80
+    ],
+
+    "clangd.arguments": [
+        "--query-driver=/usr/bin/arm-none-eabi-gcc"
+],
+"cortex-debug.variableUseNaturalFormat": true
+}
