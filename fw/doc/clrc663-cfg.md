@@ -23,6 +23,6 @@ issue. Otherwise, the signals are clean and well-defined.
 
 <figure>
 <img src="../assets/clrc663-sck.png">
-<figcaption>Figure #1: CLRC663 SCLK rate (8MHz)</figcaption>
+<figcaption>Figure #1: CLRC663 SCLK rate (4MHz)</figcaption>
 </figure>
 
