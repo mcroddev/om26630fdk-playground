@@ -22,10 +22,8 @@
 
 #include <QApplication>
 
-int main(int argc, char **argv)
+int main()
 {
-	QApplication qt_app(argc, argv);
-
 	QApplication::setApplicationName(
 		"NXP OM26630FDK Command & Control Center");
 	QApplication::setApplicationVersion("1.0.0");
