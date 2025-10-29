@@ -1,5 +1,5 @@
 CompileFlags:
-	Remove: --crt0=minimal
+        Remove: --crt0=minimal
 
 Completion:
-	HeaderInsertion: Never
+        HeaderInsertion: Never
